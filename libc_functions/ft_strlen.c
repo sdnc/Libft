@@ -1,9 +1,9 @@
-int	ft_strlen(char *str)
+size_t	ft_strlen(const char *s)
 {
 	int	len;
 
 	len = 0;
-	while (*str)
+	while (s[len])
 		len++;
 	return (len);
 }
