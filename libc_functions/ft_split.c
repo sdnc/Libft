@@ -35,7 +35,7 @@ char	**ft_split(char const *s, char c)
 		i = 0;
 		while (*s == c)
 			s++;
-		while (s[i] != c && s[i] != 0) // Girl I need some clarity on what's happening with the *s++ & the s[i++]
+		while (s[i] != c && s[i] != 0) // Does s++ affect s[i]++?
 			i++;
 		*strs = (char *)malloc((i + 1) * sizeof(char))
 		if (!*strs)
