@@ -2,7 +2,7 @@ int	ft_atoi(const char *str)
 {
 	int	result;
 	int	neg;
-	
+
 	result = 0;
 	neg = 1;
 	while (*str == ' ' || *str == '\t')
@@ -13,6 +13,5 @@ int	ft_atoi(const char *str)
 		str++;
 	while (ft_isdigit(*str))
 		result = (result * 10) + (*str++ - '0');
-	return (result * neg);
-		
+	return (result * neg);		
 }

@@ -5,11 +5,11 @@ void	*memcpy(void *dst, const void *src, size_t n)
 {
 	unsigned char	*d;
 	unsigned char	*s;
-	
+
 	d = (unsigned char *)dst;
 	s = (unsigned char *)src;
 	if (!dst && !src)
-		return(dst);
+		return (dst);
 	while (n--)
 		*d++ = *s++;
 	return (dst);
