@@ -25,7 +25,6 @@ char	**ft_split(char const *s, char c)
 	char	**strs_memaddress;
 
 	word_count = count_words(s, c);
-
 	strs = (char **)malloc((word_count + 1) * sizeof(char));
 	if (!strs)
 		return (NULL);
@@ -35,7 +34,7 @@ char	**ft_split(char const *s, char c)
 		i = 0;
 		while (*s == c)
 			s++;
-		while (s[i] != c && s[i] != 0) // Does s++ affect s[i]++?
+		while (s[i] != c && s[i] != 0)
 			i++;
 		*strs = (char *)malloc((i + 1) * sizeof(char))
 		if (!*strs)
@@ -48,5 +47,4 @@ char	**ft_split(char const *s, char c)
 	}
 	*strs = 0;
 	return (strs_memaddress);
-	
 }

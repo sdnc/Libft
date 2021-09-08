@@ -1,28 +1,41 @@
-char	*ft_itoa(int n)
+size_t	get_len(int n)
 {
-	char		base[] = "0123456789";
-	size_t		len;
-	unsigned int	nbr;
-	char		*result;
+	size_t	len;
 
-	if (n < 0)
-		nbr = -n;
-		len = 2;
-	else
-		nbr = n;
-		len = 1;
-	while ((nbr /= 10) > 0)
+	len = 0;
+	if (n <= 0)
 		len++;
-	result = (char *)malloc((len + 1) * sizeof(char));
-	if (!result)
-		return (NULL);
-	result[len--] = '\0';
-	while ((nbr /= 10) >= 0)
-		result[len--] = base[nbr % 10];
-	if (n < 0)
-		result[0] = "-";
-	return (result);
+	while (n)
+	{
+		len++;
+		n /= 10;
+	}
+	return (len);
 }
 
-// Can I save one line of code by (nbr /= 10) >= 0? 
+char	*ft_itoa(int n)
+{
+	size_t	len;
+	long	nb;
+	char	*str;
 
+	len = get_len(n);
+	nb = n;
+	str = malloc(sizeof(char) * len + 1);
+	if (!str)
+		return (NULL);
+	if (nb < 0)
+	{
+		str[0] = '-';
+		nb = -n;
+	}
+	if (nb == 0)
+		str[0] = '0';
+	str[len--] = '\0';
+	while (nb)
+	{
+		str[len--] = nb % 10 + '0';
+		nb /= 10;
+	}
+	return (str);
+}
