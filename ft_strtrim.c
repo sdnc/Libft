@@ -28,7 +28,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 	i--;
 	while (find_match(s1[i], set) == 1)
-			i--;
+		i--;
 	len = i - start + 1;
 	return (ft_substr(s1, start, len));
 }

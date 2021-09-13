@@ -45,7 +45,7 @@ char	**ft_split(char const *s, char c)
 		while (*s != c && *s != 0)
 			(*strs)[i++] = *s++;
 		(*strs) = 0;
-		strs++;		
+		strs++;
 	}
 	*strs = 0;
 	return (strs_memaddress);
