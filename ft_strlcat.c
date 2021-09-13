@@ -1,7 +1,9 @@
+#include "libft.h"
+
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	int	len;
-	int	i;
+	size_t	len;
+	size_t	i;
 
 	len = 0;
 	i = 0;

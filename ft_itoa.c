@@ -1,3 +1,5 @@
+#include "libft.h"
+
 size_t	get_len(int n)
 {
 	size_t	len;

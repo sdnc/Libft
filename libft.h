@@ -1,9 +1,6 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# define FT_INT_MIN -2147483648
-# define FT_INT_MAX 2147483647
-
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
@@ -39,7 +36,7 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
-size_t	ft_strlcat(char *dst, cosnt char *src, size_t dstsize);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlen(const char *s);
 

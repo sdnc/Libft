@@ -1,3 +1,5 @@
+#include "libft.h"
+
 int	find_match(char s, const char *set)
 {
 	int	i;
@@ -22,10 +24,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (find_match(s1[i], set) == 1)
 		i++;
 	start = i;
-	while (s[i])
+	while (s1[i])
 		i++;
 	i--;
-	while (find_match(s1[i], set == 1)
+	while (find_match(s1[i], set) == 1)
 			i--;
 	len = i - start + 1;
 	return (ft_substr(s1, start, len));

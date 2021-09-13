@@ -1,3 +1,5 @@
+#include "libft.h"
+
 size_t	count_words(char const *s, char c)
 {
 	size_t	word_count;
@@ -36,7 +38,7 @@ char	**ft_split(char const *s, char c)
 			s++;
 		while (s[i] != c && s[i] != 0)
 			i++;
-		*strs = (char *)malloc((i + 1) * sizeof(char))
+		*strs = (char *)malloc((i + 1) * sizeof(char));
 		if (!*strs)
 			return (NULL);
 		i = 0;
