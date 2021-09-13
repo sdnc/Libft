@@ -1,5 +1,5 @@
 NAME		= libft.a
-CFLAGS		= -Wall -Werror -Wextra
+CFLAGS		= -Wall -Werror -Wextra -c
 
 FILES 		=	ft_memset.c \
 					ft_bzero.c \
