@@ -6,5 +6,5 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 
 	i = 0;
 	while (s && *s)
-		f(i++, s++);	
+		f(i++, s++);
 }
