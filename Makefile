@@ -1,4 +1,5 @@
 NAME		= libft.a
+
 CFLAGS		= -Wall -Werror -Wextra -c
 
 FILES 		=	ft_memset.c \
@@ -36,7 +37,10 @@ FILES 		=	ft_memset.c \
 					ft_calloc.c \
 					ft_substr.c	\
 
-OBJ		=	 $(FILES:.c=.o)
+FILES_B		= 		ft_lstnew.c \
+
+OBJ		=	$(FILES:.c=.o)
+OBJ_B	=	$(FILES_B:.c=.o)
 
 all: $(NAME)
 
@@ -44,12 +48,18 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
+bonus: $(OBJ_B)
+	ar rcs $(NAME) $^
+
 # This won't run if the source files don't exist or are not modified
 $(OBJ): $(FILES)
 	gcc $(CFLAGS) $(FILES)
 
+$(OBJ_B): $(FILES_B)
+	gcc $(CFLAGS) $(FILES_B)
+
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(OBJ_B)
 
 fclean: clean
 	rm -f $(NAME)
@@ -58,4 +68,4 @@ re: fclean all
 
 # I use .PHONY to make sure that gnu make will still run even if files called
 # clean / fclean / all and re already exist in the directory
-.PHONY: clean fclean all re
+.PHONY: bonus clean fclean all re
