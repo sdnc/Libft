@@ -6,23 +6,23 @@ The ’del’ function is used to delete the content of an element if needed. */
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*ret;
+	t_list	*new_lst;
 	t_list	*temp;
 
 	if (!lst || !f)
 		return (NULL);
-	ret = 0;
+	new_lst = 0;
 	while (lst)
 	{
 		temp = ft_lstnew((*f)(lst->content));
 		if (!temp)
 		{
-			ft_lstclear(&ret, del);
+			ft_lstclear(&new_lst, del);
 			return (NULL);
 		}
-		ft_lstadd_back(&ret, temp);
+		ft_lstadd_back(&new_lst, temp);
 		temp = temp->next;
 		lst = lst->next;
 	}
-	return (ret);
+	return (new_lst);
 }
