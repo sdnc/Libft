@@ -38,6 +38,15 @@ FILES 		=	ft_memset.c \
 					ft_substr.c	\
 
 FILES_B		= 		ft_lstnew.c \
+					ft_lstsize.c \
+					ft_lstlast.c \
+					ft_lstiter.c \
+					ft_lstdelone.c \
+					ft_lstclear.c \
+					ft_lstadd_front.c \
+					ft_lstadd_back.c \
+					ft_lstmap.c \
+
 
 OBJ		=	$(FILES:.c=.o)
 OBJ_B	=	$(FILES_B:.c=.o)
@@ -48,8 +57,8 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
-bonus: $(OBJ_B)
-	ar rcs $(NAME) $^
+bonus: $(OBJ) $(OBJ_B)
+	ar rcs $(NAME) $(OBJ) $(OBJ_B)
 
 # This won't run if the source files don't exist or are not modified
 $(OBJ): $(FILES)
