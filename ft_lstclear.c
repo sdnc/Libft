@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sdzamari <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/20 14:09:31 by sdzamari          #+#    #+#             */
+/*   Updated: 2021/09/20 14:09:46 by sdzamari         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /* Deletes and frees the given element and every
 successor of that element, using the function ’del’
 and free(3).

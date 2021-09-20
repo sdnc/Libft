@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sdzamari <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/20 14:10:19 by sdzamari          #+#    #+#             */
+/*   Updated: 2021/09/20 14:10:21 by sdzamari         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 // Allocates (with malloc(3)) and returns a new element. 
 // The variable ’content’ is initialized 
 // with the value of the parameter ’content’.

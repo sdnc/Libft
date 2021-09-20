@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sdzamari <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/20 14:10:10 by sdzamari          #+#    #+#             */
+/*   Updated: 2021/09/20 14:10:12 by sdzamari         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /* Iterates the list ’lst’ and applies the function
  ’f’ to the content of each element.
 Creates a new list resulting of the successive applications of the function ’f’.
